@@ -1,0 +1,54 @@
+<section id="features" class="features">
+
+<div class="features-page-title text-center">
+<h1>{{ page.title }}</h1>
+</div>
+</section>
+<section class="features">
+<div class="container">
+          {% for feature in page.header.features %}
+     <div class="row features-row">
+
+          <div class="col-sm-6 features-col">
+                        <div class="feature-title">
+                        <h2 style="background:
+         {{ feature.backgroundcolor }}
+                        ; color:
+         {{ feature.fontcolor }}
+                        ;">
+         {{ feature.title }}
+                        </h2>
+                        </div>
+                        <div class="feature-subtitle">
+                        <h3>
+         {{ feature.subtitle }}
+                        </h3>
+                        </div>
+          </div>
+          <div class="col-sm-6 features-col">
+          {% if feature.date|int %}
+                        <div class="feature-datetime">
+                          <div class="feature-date">
+                          <h2>
+          {{ feature.date|date('d.m.Y') }}
+                          </h2>
+                          </div>
+                          <div class="feature-time">
+                          <h3>
+          {{ feature.date|date('H:s') }} Uhr
+                          </h3>
+                          </div>
+                        </div>
+          {% endif %}
+          {% if feature.description %}
+                        <div class="feature-description">
+          {{ feature.description|markdown }}
+                        </div>
+          {% endif %}
+          </div>
+     </div>
+{% endfor %}
+</div>
+<div class="container features-content text-center">
+</div>
+</section>

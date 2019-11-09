@@ -1,0 +1,42 @@
+{% set num_per_row = page.header.num_per_row > 0 ? page.header.num_per_row : 6 %}
+{% set client_size = 12/num_per_row %}
+<section class="clients ptb-100 text-center">
+    <section class="client-page-title">
+        <div class="container text-center">
+            <h2>{{ page.title }}</h2>
+        </div>
+    </section>
+    <section class="container client-page">
+    <p>{{ page.content }}</p>
+    </section>
+    <div class="container">
+        {% for row in page.header.clients|batch(num_per_row) %}
+            <div class="row">
+                {% for client in row %}
+                    <div class="col-md-{{client_size}} col-sm-6 col-xs-6 section-margin client">
+                        <a href="{{ client.url }}" target="_">
+                            {{ page.media.images[client.image].html('', client.name) }}
+                        </a>
+                        <div class="headings">
+                        {% if client.name %}
+                        <h2>
+                        {{ client.name }}
+                        </h2>
+                        {% else %}
+                        <h2><br/></h2>
+                        {% endif %}
+                        </div>
+                        <div class="headings">
+                        {% if client.description %}
+                        <h3>{{ client.description }}</h3>
+                        {% else %}
+                        <h3><br/></h3>
+                        {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+    <!--end of .container -->
+</section>

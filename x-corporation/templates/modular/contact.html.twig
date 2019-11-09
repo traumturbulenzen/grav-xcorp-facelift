@@ -1,0 +1,13 @@
+<section id="{% if form.name %}{{ form.name }}{% endif%}" class="contact-form">
+
+    <div class="container contact-content ptb-50">
+        {{ content }}
+    </div>
+    <div class="container ptb-50">
+        <div class="row">
+            <div class="col">
+                {% include "forms/contact.html.twig" %}
+            </div>
+        </div>
+    </div>
+</section>

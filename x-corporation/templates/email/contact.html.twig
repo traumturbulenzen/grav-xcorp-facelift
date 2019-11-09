@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+    <style>
+        /* -------------------------------------
+                GLOBAL
+        ------------------------------------- */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        img {
+            max-width: 100%;
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: none;
+            width: 100%!important;
+            height: 100%;
+        }
+        /* -------------------------------------
+                ELEMENTS
+        ------------------------------------- */
+        a,
+        a:default,
+        .ii a[href] {
+            color: #cc4f25 !important;
+            text-decoration: none;
+        }
+        a:hover {
+            color: black;
+        }
+        .last {
+            margin-bottom: 0;
+        }
+        .first {
+            margin-top: 0;
+        }
+        .padding {
+            padding: 10px 0;
+        }
+        /* -------------------------------------
+                BODY
+        ------------------------------------- */
+        table.body-wrap {
+            width: 100%;
+            padding: 20px;
+        }
+        table.body-wrap .container {
+            border: 1px solid #f0f0f0;
+        }
+        /* -------------------------------------
+                HEADER
+        ------------------------------------- */
+        table.header-wrap {
+            width: 100%;
+            clear: both!important;
+            background: rgba(0,0,0,0.85);
+            border-bottom: 25px solid #cc4f25;
+        }
+        .header-wrap .container p {
+            font-size: 24px;
+            color: black;
+        }
+        .header-wrap .container h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: white;
+        }
+        /* -------------------------------------
+                FOOTER
+        ------------------------------------- */
+        table.footer-wrap {
+            width: 100%;
+            clear: both!important;
+        }
+        .footer-wrap .container p {
+            font-size: 12px;
+            color: #666;
+
+        }
+        .footer-wrap .container a {
+            font-size: 12px;
+            color: #cc4f25;
+        }
+        .footer-wrap .container a:hover {
+            color: black;
+        }
+        table.footer-wrap a {
+            color: #cc4f25;
+        }
+        /* -------------------------------------
+                TYPOGRAPHY
+        ------------------------------------- */
+        h1, h2, h3 {
+            font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            color: #000;
+            margin: 40px 0 10px;
+            line-height: 1.2;
+            font-weight: 300;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 28px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        p, ul, ol {
+            margin-bottom: 10px;
+            font-weight: normal;
+            font-size: 16px;
+            padding: 15px 0 15px 0;
+        }
+        ul li, ol li {
+            margin-left: 5px;
+            list-style-position: inside;
+        }
+        strong {
+          font-weight: 700;
+        }
+        .word-break {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+
+            -ms-word-break: break-all;
+            /* This is the dangerous one in WebKit, as it breaks things wherever */
+            word-break: break-all;
+            /* Instead use this non-standard one: */
+            word-break: break-word;
+
+            /* Adds a hyphen where the word breaks, if supported (No Blink) */
+            -ms-hyphens: auto;
+            -moz-hyphens: auto;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+        /* ---------------------------------------------------
+                RESPONSIVENESS
+                Nuke it from orbit. It's the only way to be sure.
+        ------------------------------------------------------ */
+        /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+        .container {
+            display: block!important;
+            max-width: 1000px!important;
+            margin: 0 auto!important; /* makes it centered */
+            clear: both!important;
+        }
+        /* Set the padding on the td rather than the div for Outlook compatibility */
+        .body-wrap .container {
+            padding: 20px;
+        }
+        /* This should also be a block element, so that it will fill 100% of the .container */
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            display: block;
+        }
+        /* Let's make sure tables in the content area are 100% wide */
+        .content table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body bgcolor="#f6f6f6">
+  <!-- header -->
+  <table class="header-wrap">
+      <tr>
+          <td></td>
+          <td class="container">
+              <div class="content">
+                  <table>
+                      <tr>
+                          <td align="center">
+                              <h1>Bewerbung als Erzieher/Pädagoge</h1>
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+          </td>
+          <td></td>
+      </tr>
+  </table>
+  <!-- /header -->
+<!-- body -->
+<table class="body-wrap" bgcolor="#f6f6f6">
+    <tr>
+        <td></td>
+        <td class="container" bgcolor="#FFFFFF">
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>
+                            <p>Liebe(r) {{ form.value.jobname|e }},</p>
+
+                            <p>vielen Dank für Deine Bewerbung.
+                               Dein Datensatz ist wie folgt bei uns eingangen:</p>
+
+                            {% block content %}
+                            {{ content|raw }}
+                            {% endblock content %}
+
+                            <p>
+                            Ihre Bewerbung wird so schnell wie es geht bearbeitet.
+                            Bitte haben Sie Verständnis dafür, wenn die Bearbeitung gegebenenfalls
+                            etwas dauern kann - aber wir kümmern uns.
+                            </p>
+                            <p>
+                            Wir freuen uns, Sie in einem persönlichen Gespräch bald kennen zu lernen.
+                            </p>
+                            <p>
+                            Ihr TEVBB-Team
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td></td>
+    </tr>
+</table>
+<!-- /body -->
+
+<!-- footer -->
+<table class="footer-wrap">
+    <tr>
+        <td></td>
+        <td class="container">
+            <div class="content">
+                <table>
+                    <tr>
+                        <td align="center">
+                            <p><a href="tevbb.org">TEVBB.ORG</a> -
+                            © 2019 Mr. Bertrand - powered by Grav CMS | All rights reserved. License under Creative Commons Attribution 4.0 International (CC BY 4.0)</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td></td>
+    </tr>
+</table>
+<!-- /footer -->
+
+</body>
+</html>
