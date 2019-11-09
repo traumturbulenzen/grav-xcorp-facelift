@@ -1,6 +1,6 @@
 Live demo auf [tevbb.ddns.net](http://github.com)
 
-Ich empfehle eine eine frische [grav-admin](https://getgrav.org/downloads) Installtion. `/x-corporation` in den _**webrootfolder**_ Ordner `grav/user/themes` und wenn `/demo-content/*` in `grav/user/pages/*` Notfalls die _permissions_ erneut setzen.
+Ich empfehle eine eine frische [grav-admin](https://getgrav.org/downloads) Installtion. `/x-corporation` in den _**webroot**_ unter `grav/user/themes` entpacken und wenn erwünscht den`/demo-content/*` in `grav/user/pages/*` Notfalls die _permissions_ erneut setzen.
 
 ## Requirements:
 
